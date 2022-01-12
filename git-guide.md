@@ -53,4 +53,13 @@ checkout:
 .git folder:
   - A folder in git repositories that holds files and folders for branches, config, etc.
 
+.gitignore:
+  - A file that holds the names of all the files to be ignored by the git additions and commits. git add and commit will ignore any files with their names in .gitignore.
 
+
+
+Pull requests:
+  - Pull requests are submissions of a branch to a GitHub repository. They can be set up so the changes need to be reviewed by someone else before being merged with the main branch.
+
+SSH authentication to repositories:
+  - A SSH public key can be uploaded to a GitHub account which allows the corresponding private key to be used to establish a connection between the remote repository and the local one. The local device can then pull repositories off of GitHub and alter them and submit changes to the remote repositories.
