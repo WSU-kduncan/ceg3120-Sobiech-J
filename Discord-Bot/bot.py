@@ -50,7 +50,7 @@ async def on_message(message):
         response = random.choice(hitchhiker_quotes)
         await message.channel.send(response)
 
-#assignment additions:
+    #assignment additions:
 
     abe_quotes = [
             "With malice toward none with charity for all with firmness in the right as God gives us to see the right let us strive on to finish the work we are in to bind up the nation's wounds, to care for him who shall have borne the battle and for his widow and his orphan ~ to do all which may achieve and cherish a just and lasting peace among ourselves and with all nations.",
