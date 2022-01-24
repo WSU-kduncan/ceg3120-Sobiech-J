@@ -5,7 +5,7 @@ Setup:
 
 - If the token is saved in the .env file the bot.py code will need to access the file to get the token. This requires the python-dotenv library. Regardless, this code will require python to run and the discord.py script. The script does not come with the default version of python and must be downloaded. Download through pip is recommended.
 
-- This bot was developed in Ubuntu Server. The default python2 installation did not work well with the libraries mentioned above. It is recommended to install python3 as well as pip3. If you are unable to download discord.py or python-dotenv try installing python3 and pip3 first then use pip3 for the installs.
+- Python2 does not work well with the libraries mentioned above. Install python3 and pip3 first then use pip3 for the installations of discord.py and python-dotenv.
 
 
 Usage:
