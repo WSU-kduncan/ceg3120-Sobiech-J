@@ -11,7 +11,7 @@ Setup:
 Usage:
 -This bot will output text quotations when certain words are entered into a Discord server that the bot is active in. To get a response a user must enter a certain phrase without @ messaging the bot. Entering the phrase `towel!` (without quotation marks) will cause the bot to output one of various quotes to the server's chat. Using the phrase `Abe!` (again without quotations) will cause the server to post a famous Abraha Lincoln quote to the server's chat.
 
-![](~/Discord-Bot/discord-bot-proof.jpg)
+![Bot Screenshot](discord-bot-proof.jpg)
 
 Research:
 -The bot, like any computer program, requires a computer to run on. While one could run this script 24/7 on their home computer, there are better options. Cloud services - if you are willing to pay for them - can run the bot at all times. This is a better solution than a home computer as the cloud will keep the bot running at virtually all times. You can also host the bot yourself on a dedicated server you own. Raspberry Pis are cheap, small computers that are powerful enough to run a Discord bot. I recommend hosting your bot at home with cheap computer like a Raspberry Pi if a Discord bot is the only program you plan to run. With the services the bot is offering setup should be easy and should not require any port forwarding required with other services. Constant internet connection will be required if you decide to host the bot yourself.
