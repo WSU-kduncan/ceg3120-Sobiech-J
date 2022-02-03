@@ -6,23 +6,39 @@
 ### Part 1 - Building a VPC
 
 * Create a VPC
-  * TODO - What a VPC is/ its role
-![Creating a VPC screenshot](TODO-LINK-TO-SCREENSHOT)
-* Create a subnet
+  * The Virtual Private Cloud (VPC) is the cloud infrastructure that is reserved for the user (thus it is private) for them to add their systems to. It is the foundational piece that I will add a subnet, gateway and ultimately the virtual machine instance to.
+![VPC screenshot](images/VPC.jpg)
 
-* How to link internet gateway and routing table: https://docs.aws.amazon.com/vpc/latest/userguide/route-table-options.html#route-tables-internet-gateway
+* Create a subnet
+  * A subnet is a subdivision of an IP network. The VPC hold subnets, and in turn the subnet holds and provides network infrastructure to the actual devices on the network such as an AWS virtual machine instance.
+![Subnet screenshot](images/Subnet.jpg)
+
+* Create an internet gateway
+  * An internet gateway works as the access point to the wider world. It is the means by which a subnet can access the wider internet. It is attached to the VPC and it is used in route tables to establish internet connectivity.
+![Internet Gateway screenshot](images/Gateway.jpg)
+
+* Create a route table
+  * A route table provides the routes for the subnet and internet gateway to interact. It can tell specific traffic to go different places.
+  * How to link internet gateway and routing table: https://docs.aws.amazon.com/vpc/latest/userguide/route-table-options.html#route-tables-internet-gateway
+![Route Table screenshot](images/RoutingTable.jpg)
+
+* Create a security group
+  * Security groups can be assigned to VPCs and instances to define what kind of access is allowed. They can filter traffic and can bar or allow access to devices. In this case a security group is used to only allow ssh access to the AWS virtual machine instance from certain IP addresses.
+![Security Group screenshot](images/SecurityGroup.jpg)
+
 
 
 ### Part 2 - Launch an Instance
 
 * Create a new instance:
+  * AWS instance creation wizard - accessible under "Launch instance - walks through the steps of creating an instance.
   * AMI: Ubuntu Server 20.04, SSD Volume Type (64-bit x86)
     * default username: ubuntu
   * Instance type:
     * t2.micro (1 CPU, 1 GiB Memory)
 
 * Attach instance to AWS
-  * AWS instance creation wizard walks through the steps of creating an instance. Under Step 3: Configure Instance Details go to Network and select your desired VPC (in this case the one tagged Sobiech-VPC).
+  * Under Step 3: Configure Instance Details go to Network and select your desired VPC (in this case the one tagged Sobiech-VPC).
 
 * Determine whether an IPv4 address will be auto-assigned to the instance:
   * This can be selected on the same page as the last step under the option for Auto-assign Public IP. Since I will be attaching an elastic IP later, I left this setting on the default setting for the subnet which is to disable (do not connect a public IP).
@@ -45,5 +61,4 @@
   * ssh into instance with `ssh -i name-of-identity-file ubuntu@public-ip`
   * Change hostname with `sudo vim /etc/hostname`
   * Use `sudo reboot` then reconnect after waiting a minute for hostname change to take effect
-
 ![AWS Instance with Hostname changed](images/AWS-Instance.jpg)
