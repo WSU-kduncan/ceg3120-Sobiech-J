@@ -55,6 +55,7 @@
 * Reserve an Elastic IP Address and associate it with your instance:
   * Back under the menus to create a VPC and other components related to it, go to the Elastic IPs tab. Create an elastic IP using the "Allocate Elastic IP" button in the top right. Under the actions tab, there is an option to associate and elastic IP with an instance. Use that.
 
+Overview for operational AWS Instance:
 ![Summary of AWS Instance](images/InstanceSummary.jpg)
 
 * Change Hostname of AWS Instance:
