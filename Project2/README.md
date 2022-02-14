@@ -24,7 +24,8 @@
 
 * Create a security group
   * Security groups can be assigned to VPCs and instances to define what kind of access is allowed. They can filter traffic and can bar or allow access to devices. In this case a security group is used to only allow ssh access to the AWS virtual machine instance from certain IP addresses.
-![Security Group screenshot](images/SecurityGroup.jpg)
+![Security Group screenshot](images/SecurityGroupShort.jpg)
+![Security Group screenshot](images/InboundSecurityRules.jpg)
 
 
 
