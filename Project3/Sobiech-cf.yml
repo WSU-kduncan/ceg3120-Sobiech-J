@@ -138,6 +138,6 @@ Resources:
             apt-get install -y \
               git \
               python3 \
-              python3-pip3 && \
+              python3-pip && \
             hostnamectl set-hostname cloud-form-ubuntu && \
             reboot
