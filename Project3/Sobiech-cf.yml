@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: Sobiech Cloud Formation template for AWS to create a VPC with necessary components, allow SSH access from trusted networks, and create a single instance with an Elastic IP address.
-  Testing area for AWS: This template builds a linux VM for CEG 2350 @ WSU.
+#  Testing area for AWS: This template builds a Linux VM for CEG 3120 @ WSU.
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
@@ -92,10 +92,6 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: !Ref SSHLocation
-        - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
           CidrIp: 130.108.0.0/16  # WSU CIDR
         - IpProtocol: -1
           FromPort: '-1'
@@ -142,6 +138,6 @@ Resources:
             apt-get install -y \
               git \
               python3 \
-              pip3 && \
-            hostnamectl set-hostname cloud-formation-ubuntu && \
+              python3-pip3 && \
+            hostnamectl set-hostname cloud-form-ubuntu && \
             reboot
