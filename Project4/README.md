@@ -23,7 +23,7 @@ Host webserver2
 3. **_HAProxy configuration & documentation requirements_**
    - How to set up a HAProxy load balancer
      - What file(s) where modified & their location:
-	*  /etc/haproxy/haproxy - has the config info for the proxy. I added details for the frontend and backend
+       -  /etc/haproxy/haproxy - has the config info for the proxy. I added details for the frontend and backend
      - What configuration(s) were set (if any)
 ```
 frontend proxyfrontend
@@ -35,24 +35,25 @@ backend myservers
         server webserver1 10.0.1.11:80
         server webserver2 10.0.1.12:80
 ```
+   - Continuation of 3...
      - How to restart the service after a configuration change
-	* `sudo systemctl restart haproxy`
+       - `sudo systemctl restart haproxy`
      - Resources used (websites)
-	* https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/
-	* https://www.haproxy.com/blog/haproxy-configuration-basics-load-balance-your-servers/
-	* https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-to-set-up-http-load-balancing-on-an-ubuntu-vps
+       - https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/
+       - https://www.haproxy.com/blog/haproxy-configuration-basics-load-balance-your-servers/
+       - https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-to-set-up-http-load-balancing-on-an-ubuntu-vps
 4. **_Webserver 1 & 2 configuration & documentation requirements_**
    - How set up a webserver
      - What file(s) were modified & their location
-	* Only /var/www/html/index.html was modified (replaced)
+       - Only /var/www/html/index.html was modified (replaced)
      - What configuration(s) were set (if any)
-	* everything worked with the default apache2 configurations
+       - everything worked with the default apache2 configurations
      - Where site content files were located (and why)
-	* Default location for content is in /var/www/html/ . index.html in that folder will show the homepage by default.
+       - Default location for content is in /var/www/html/ . index.html in that folder will show the homepage by default.
      - How to restart the service after a configuration change
-	* sudo systemctl restart apache2
+       - sudo systemctl restart apache2
      - Resources used (websites)
-	* I've messed around with some basic apache2 stuff before
+       - I've messed around with some basic apache2 stuff before
 5. From the browser, when connecting to the proxy server, take two screenshots.
    - one screenshot that shows content from "server 1"
    - one screenshot that shows content from "server 2"
