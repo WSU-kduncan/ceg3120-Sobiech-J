@@ -16,6 +16,7 @@ Host webserver2
         user ubuntu
         IdentityFile /home/ubuntu/private-key.pem
 ```
+   * Continuation of 1...
       * The other servers have an entry for the proxy using its private ip instead of its own entry.
       * In a real world application we may want to avoid using the same key for everything like we have in this example. Given that the webservers are meant to be backups for each other it seems like an unnecessary risk to have them accessible with the same exact admin key.
 2. Document how to SSH in between the systems utilizing their private IPs.
