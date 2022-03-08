@@ -57,6 +57,8 @@ backend myservers
        - I've messed around with some basic apache2 stuff before
 5. From the browser, when connecting to the proxy server, take two screenshots.
    - one screenshot that shows content from "server 1"
+![Server1 page](Server1-CEG3120-ITDesign.png)
    - one screenshot that shows content from "server 2"
+![Server1 page](Server2-CEG3120-ITDesign.png)
 6. (Optional) - link to your proxy so I can click it.
    - http://54.236.178.130/
