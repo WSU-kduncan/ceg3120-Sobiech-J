@@ -255,6 +255,7 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
+            apt-get upgrade && \
             # TODO need to install apache or nginx - DONE
             apt install -y apache2 && \
             apt-get install -y git && \
