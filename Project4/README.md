@@ -44,11 +44,17 @@ backend myservers
 4. **_Webserver 1 & 2 configuration & documentation requirements_**
    - How set up a webserver
      - What file(s) were modified & their location
+	* Only /var/www/html/index.html was modified (replaced)
      - What configuration(s) were set (if any)
+	* everything worked with the default apache2 configurations
      - Where site content files were located (and why)
+	* Default location for content is in /var/www/html/ . index.html in that folder will show the homepage by default.
      - How to restart the service after a configuration change
+	* sudo systemctl restart apache2
      - Resources used (websites)
+	* I've messed around with some basic apache2 stuff before
 5. From the browser, when connecting to the proxy server, take two screenshots.
    - one screenshot that shows content from "server 1"
    - one screenshot that shows content from "server 2"
 6. (Optional) - link to your proxy so I can click it.
+   - http://54.236.178.130/
